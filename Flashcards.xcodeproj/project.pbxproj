@@ -15,6 +15,7 @@
 		63B9FD0F23F878F300009FBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63B9FD0D23F878F300009FBF /* LaunchScreen.storyboard */; };
 		63B9FD1A23F878F400009FBF /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9FD1923F878F400009FBF /* FlashcardsTests.swift */; };
 		63B9FD2523F878F400009FBF /* FlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B9FD2423F878F400009FBF /* FlashcardsUITests.swift */; };
+		63FDCFF123FF41DD00ACFD32 /* snorlaxFinal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63FDCFF023FF41DD00ACFD32 /* snorlaxFinal.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		63B9FD2023F878F400009FBF /* FlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63B9FD2423F878F400009FBF /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		63B9FD2623F878F400009FBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63FDCFF023FF41DD00ACFD32 /* snorlaxFinal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snorlaxFinal.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				63B9FD0423F878F200009FBF /* SceneDelegate.swift */,
 				63B9FD0623F878F200009FBF /* ViewController.swift */,
 				63B9FD0823F878F200009FBF /* Main.storyboard */,
+				63FDCFF023FF41DD00ACFD32 /* snorlaxFinal.jpg */,
 				63B9FD0B23F878F300009FBF /* Assets.xcassets */,
 				63B9FD0D23F878F300009FBF /* LaunchScreen.storyboard */,
 				63B9FD1023F878F300009FBF /* Info.plist */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63FDCFF123FF41DD00ACFD32 /* snorlaxFinal.jpg in Resources */,
 				63B9FD0F23F878F300009FBF /* LaunchScreen.storyboard in Resources */,
 				63B9FD0C23F878F300009FBF /* Assets.xcassets in Resources */,
 				63B9FD0A23F878F200009FBF /* Main.storyboard in Resources */,
