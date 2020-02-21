@@ -28,17 +28,17 @@ class ViewController: UIViewController {
         frontLabel.clipsToBounds = true
         backLabel.clipsToBounds = true
         card.layer.shadowRadius = 15.0
-        card.layer.shadowOpacity = 0.5
+        card.layer.shadowOpacity = 0.7
         btnOptionOne.layer.borderWidth = 3.0
-        btnOptionOne.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        btnOptionOne.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         btnOptionOne.layer.cornerRadius = 20.0
         
         btnOptionTwo.layer.borderWidth = 3.0
-        btnOptionTwo.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        btnOptionTwo.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         btnOptionTwo.layer.cornerRadius = 20.0
         
         btnOptionThree.layer.borderWidth = 3.0
-        btnOptionThree.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        btnOptionThree.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         btnOptionThree.layer.cornerRadius = 20.0
         
     }
