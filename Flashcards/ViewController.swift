@@ -82,5 +82,16 @@ class ViewController: UIViewController {
     {
         btnOptionThree.isHidden = true
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+    }
+    
+    
 }
 
