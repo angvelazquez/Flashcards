@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnOptionTwo: UIButton!
     @IBOutlet weak var btnOptionThree: UIButton!
     @IBOutlet var myWholeView: UIView!
+    @IBOutlet weak var addBtn: UIButton!
     
     override func viewDidLoad()
     {
@@ -41,6 +42,10 @@ class ViewController: UIViewController {
         btnOptionThree.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         btnOptionThree.layer.cornerRadius = 20.0
         
+        addBtn.layer.borderWidth = 3.0
+        addBtn.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        addBtn.layer.cornerRadius = 20.0
+        
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any)
@@ -53,6 +58,12 @@ class ViewController: UIViewController {
         {
             frontLabel.isHidden = true
         }
+    }
+    
+    func updateFlashcard(question: String, answer: String)
+    {
+        frontLabel.text = question
+        backLabel.text = answer
     }
     
     @IBAction func didTapOptionOne(_ sender: Any)
