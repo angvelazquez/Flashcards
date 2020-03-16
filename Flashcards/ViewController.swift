@@ -193,7 +193,7 @@ class ViewController: UIViewController {
         }
         
         
-        UserDefaults.standard.set(flashcards, forKey: "flashcards")
+        UserDefaults.standard.set(dictionaryArray, forKey: "flashcards")
         
         //Log it
         print("Flashcards saved to UserDefaults")
@@ -201,16 +201,14 @@ class ViewController: UIViewController {
     
     func readSavedFlashcards()
     {
-        
-        
-        //Read dicitionary array from disk (if any)
-        if let dictionaryArray = UserDefaults.standard.set(flashcards, forKey: "flashcards") as? [[String: String]]
-        {
-            let savedCards = dictionaryArray.map { dictionary -> Flashcard in return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)}
-            
-            //Put all these cards in our flashcards array
-            flashcards.append(contentsOf: savedCards)
-        }
+      //Read dicitionary array from disk (if any)
+      if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]]
+      {
+        let savedCards = dictionaryArray.map { dictionary -> Flashcard in return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)}
+         
+        //Put all these cards in our flashcards array
+        flashcards.append(contentsOf: savedCards)
+      }
     }
     
 }
