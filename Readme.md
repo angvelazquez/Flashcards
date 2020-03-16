@@ -1,17 +1,16 @@
-## Lab 2
+## Lab 3
 
 ### App Description
-`TODO://` This app is an extension of the previously worked on simple flashcard app where you can now edit the question and answer.
+`TODO://` My flashcard app is now able to save cards into an array and go through every new card added!
 
 ### App Walk-though
-<img src="http://g.recordit.co/cf4TU8Lffv.gif" width=200><br>
+<img src="https://recordit.co/An3EN3lyvV" width=200><br>
 
 ## Required
-- [X] User can open the creation screen
-- [X] User can cancel out of the creation screen
-- [X] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [X] User can browse through multiple flashcards
+- [X] User can re-open the app and see previously created flashcards
 - [X] Push code to GitHub
 ## Optional
-- [X] User gets an error if they try to create a new flashcard with no question or answer
+- [ ] User can delete a flashcard
 - [ ] User can edit existing flashcard
-- [ ] User can add multiple choice answers in the creation screen
+- [ ] User can store multiple choice questions
