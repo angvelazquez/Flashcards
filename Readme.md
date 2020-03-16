@@ -4,7 +4,7 @@
 `TODO://` My flashcard app is now able to save cards into an array and go through every new card added!
 
 ### App Walk-though
-<img src="https://recordit.co/An3EN3lyvV" width=200><br>
+<img src="http://g.recordit.co/An3EN3lyvV.gif" width=200><br>
 
 ## Required
 - [X] User can browse through multiple flashcards
