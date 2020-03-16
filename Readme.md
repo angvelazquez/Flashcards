@@ -1,7 +1,7 @@
 ## Lab 3
 
 ### App Description
-`TODO://` My flashcard app is now able to save cards into an array and go through every new card added!
+My flashcard app is now able to save cards into an array and go through every new card added!
 
 ### App Walk-though
 <img src="http://g.recordit.co/An3EN3lyvV.gif" width=200><br>
