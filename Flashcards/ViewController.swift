@@ -81,18 +81,66 @@ class ViewController: UIViewController {
         }
     }
     
-    func updateFlashcard(question: String, answer: String)
+    @IBAction func didTapOnDelete(_ sender: Any) {
+        // Show confirmation
+        let alert = UIAlertController(title: "Delete flashcard", message: "Are you sure you want to delete it?", preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { action in self.deleteCurrentFlashcard()
+        }
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+    }
+    
+    func deleteCurrentFlashcard()
+    {
+        // Delete current
+        flashcards.remove(at: currentIndex)
+        
+        // Special case: Check if last card was deleted
+        if currentIndex > flashcards.count - 1
+        {
+            currentIndex = flashcards.count - 1
+        }
+        
+        // Special case: Check if first card was deleted
+        if currentIndex < 0
+        {
+            currentIndex = 0
+        }
+        
+        updateNextPrevButtons()
+        updateLabels()
+        saveAllFlashcardsToDisk()
+    }
+    
+    func updateFlashcard(question: String, answer: String, extraAnswerOne: String?, extraAnswerTwo: String?, extraAnswerThree: String?, isExisitng: Bool)
     {
         let flashcard = Flashcard(question: question, answer: answer)
         frontLabel.text = flashcard.question
         backLabel.text = flashcard.answer
         
-        //Adding flashcard in the flashcards array
-        flashcards.append(flashcard)
+        btnOptionOne.setTitle(extraAnswerOne, for: .normal)
+        btnOptionTwo.setTitle(extraAnswerTwo, for: .normal)
+        btnOptionThree.setTitle(extraAnswerThree, for: .normal)
         
-        currentIndex = flashcards.count - 1
-        print("Added new flashcard")
-        print("We now have \(flashcards.count) flashcards")
+        if isExisitng
+        {
+            // Replace existing flashcard
+            flashcards[currentIndex] = flashcard
+        }
+        else
+        {
+        
+            //Adding flashcard in the flashcards array
+            flashcards.append(flashcard)
+        
+            currentIndex = flashcards.count - 1
+            print("Added new flashcard")
+            print("We now have \(flashcards.count) flashcards")
+        }
         
         // Update buttons
         updateNextPrevButtons()
@@ -102,6 +150,7 @@ class ViewController: UIViewController {
         
         //Save card into UserDefault
         saveAllFlashcardsToDisk()
+        
     }
     
     @IBAction func didTapOptionOne(_ sender: Any)
@@ -111,7 +160,6 @@ class ViewController: UIViewController {
     @IBAction func didTapOptionTwo(_ sender: Any)
     {
         frontLabel.isHidden = true
-        myWholeView.backgroundColor = UIColor(patternImage: UIImage(named: "snorlaxFinal.jpg")!)
         btnOptionTwo.isHidden = true
         btnOptionOne.isHidden = true
         btnOptionThree.isHidden = true
@@ -163,6 +211,11 @@ class ViewController: UIViewController {
         let creationController = navigationController.topViewController as! CreationViewController
         
         creationController.flashcardsController = self
+        if segue.identifier == "EditSegue"
+        {
+            creationController.initialQuestion = frontLabel.text
+            creationController.initialAnswer = backLabel.text
+        }
     }
     
     func updateNextPrevButtons() {

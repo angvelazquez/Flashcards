@@ -15,6 +15,11 @@ class CreationViewController: UIViewController {
     @IBOutlet weak var questionTextField: UITextField!
     
     @IBOutlet weak var answerTextField: UITextField!
+    @IBOutlet weak var extraAnswerOne: UITextField!
+    @IBOutlet weak var extraAnswerTwo: UITextField!
+    @IBOutlet weak var extraAnswerThree: UITextField!
+    var initialQuestion: String?
+    var initialAnswer: String?
     
     @IBAction func didTapOnCancel(_ sender: Any) {
         
@@ -26,6 +31,12 @@ class CreationViewController: UIViewController {
         let questionText = questionTextField.text
         
         let answerText = answerTextField.text
+        
+        let answerTextOne = extraAnswerOne.text
+        
+        let answerTextTwo = extraAnswerTwo.text
+        
+        let answerTextThree = extraAnswerThree.text
         
         if questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty
         {
@@ -39,7 +50,13 @@ class CreationViewController: UIViewController {
         }
         else
         {
-            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+            //See if it's existing
+            var isExisting = false
+            if initialQuestion != nil
+            {
+                isExisting = true
+            }
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: answerTextOne!, extraAnswerTwo: answerTextTwo!, extraAnswerThree: answerTextThree!, isExisitng: isExisting)
             
             dismiss(animated: true)
         }
@@ -50,6 +67,8 @@ class CreationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        questionTextField.text = initialQuestion
+        answerTextField.text = initialAnswer
         
       
     }
