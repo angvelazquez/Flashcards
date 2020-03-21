@@ -4,7 +4,7 @@
 My flashcard app is now able to save cards into an array and go through every new card added!
 
 ### App Walk-though
-<img src="http://g.recordit.co/BSN3E3vzYh.gif" width=200><br>
+<img src="http://g.recordit.co/CtnUW7MWNS.gif" width=200><br>
 
 ## Required
 - [X] User can browse through multiple flashcards
